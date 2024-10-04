@@ -6,16 +6,18 @@ t.speed(0) # maximum speed
 
 
 def equilateral(longueur) :
-    for _ in range (3):
-        t.forward(longueur)
-        t.left(120)
+    polygone(longueur,3)
         
 def carré(longueur) :
-    for _ in range (4):
+    polygone(longueur,4)
+        
+def polygone(longueur, nb_cotes):
+    for _ in range (nb_cotes):
         t.forward(longueur)
-        t.left(90)
+        t.left(360/nb_cotes) 
         
-        
-l = int(input("Quels longueur veut tu ? "))
-carré(l)
+
+polygone(100,5)
+polygone(200,5)
+
 turtle.exitonclick()
