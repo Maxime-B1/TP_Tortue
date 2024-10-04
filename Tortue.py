@@ -11,13 +11,14 @@ def equilateral(longueur) :
 def carré(longueur) :
     polygone(longueur,4)
         
-def polygone(longueur, nb_cotes):
+def polygone(longueur, nb_cotes, ajout=0, deviation=0):
+    angle = (360/nb_cotes) - deviation
     for _ in range (nb_cotes):
         t.forward(longueur)
-        t.left(360/nb_cotes) 
+        longueur=longueur+ajout
+        t.right(angle)
         
 
-polygone(100,5)
-polygone(200,5)
+polygone(100, 4, 20, 5)
 
 turtle.exitonclick()
