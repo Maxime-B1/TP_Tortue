@@ -18,14 +18,22 @@ def polygone(longueur, nb_cotes, ajout=0, deviation=0):
             #t.color(c)
         t.forward(longueur)
         longueur=longueur+ajout
-        t.right(angle)
+        t.left(angle)
         
 def figure1() :
     l=5
     for _ in range (50):
         polygone(l,4, 5, 1)
         l=l+4*5
+        
+def figure2() :
+    l=200
+    for _ in range (100):
+        for _ in range (4):
+            carré(l)
+        l=l-2
+        t.left(10)
     
-figure1()
+figure2()
 
 turtle.exitonclick()
