@@ -18,7 +18,7 @@ def polygone(longueur, nb_cotes, ajout=0, deviation=0):
             #t.color(c)
         t.forward(longueur)
         longueur=longueur+ajout
-        t.left(angle)
+        t.right(angle)
         
 def figure1() :
     l=5
